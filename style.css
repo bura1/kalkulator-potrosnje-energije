@@ -1,0 +1,145 @@
+.kalkulator-potrosnje-energije {
+    max-width: 100%;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    color: #2E3B4B;
+}
+.form-box {
+    padding: 10px 25px 25px 25px;
+}
+
+.kpeform-field {
+    margin-bottom: 16px;
+}
+.kpeform-field-left {
+    padding-right: 8px!important;
+    padding-left: 0!important;
+}
+.kpeform-field-right {
+    padding-right: 0!important;
+    padding-left: 8px!important;
+}
+@media (max-width: 1199px) {
+    .kpeform-field-left {
+        padding-right: 0!important;
+    }
+    .kpeform-field-right {
+    padding-left: 0!important;
+}
+}
+
+.inner-kpeform-field {
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.kpebtn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background: linear-gradient(#f9f9f9, #f7f7f7);
+    border-radius: 5px;
+    padding: 10px 26px;
+    color: #3e3e3e;
+    border: none;
+    font-size: 17px;
+    margin-top: 45px;
+    box-shadow: 0px 1px 3px 0px #00000078;
+    z-index: 0;
+    position: relative;
+    clear: both;
+}
+
+.parametar {
+    margin-bottom: 10px;
+    margin-top: 15px;
+    background-color: whitesmoke;
+    padding-left: 5px;
+    font-size: 16px!important;
+}
+
+.kpeform label {
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.rezultatkpe {
+    margin-top: 30px;
+    display: none;
+}
+
+.select2-container {
+    width: 100%!important;
+}
+
+.input-range::-webkit-slider-runnable-track {
+    color: #72bf44!important;
+}
+
+.spin-button {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.spin-button::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+.select2-search--dropdown {
+    padding: 10px!important;
+}
+.select2-search--dropdown .select2-search__field {
+    height: auto;
+    background: #ffffff;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+.select2-container .select2-selection--single {
+    height: 30px!important;
+}
+
+
+.input-range {
+    -webkit-appearance: none;
+    background-color: #f5f6f8;
+    float: left;
+    width: 75%!important;
+    margin-right: 5%;
+    margin-bottom: 0;
+    margin-top: 11px;
+    height: 5px;
+}
+.input-range:focus{
+    outline:none;
+}
+.input-range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #70bf43;
+    border-radius: 50%;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; 
+}
+.input-range::-moz-range-thumb{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #70bf43;
+    border-radius: 50%;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; 
+}
+
+@media (max-width: 767px) {
+    .kpeform label {
+        display: block;
+        margin-bottom: 0;
+    }
+    .kalkulator-potrosnje-energije br {
+        display: block!important;
+    }
+}
