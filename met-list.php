@@ -1,6 +1,11 @@
 <?php
 
 $METs = array(
+	array("hodanje, 5 km/h, umjereni intenzitet", 3),
+	array("trčanje, 8 km/h, umjereni intenzitet", 8.3),
+	array("vožnja bicikla <16 km/h", 4),
+	array("istezanje, blago", 2.3),
+	array("tuširanje, stojeći", 2),
 	array("aerobik u vodi", 5.5),
 	array("aerobik, umjereni intenzitet", 5),
 	array("aerobik, visoki intenzitet", 7.3),
@@ -45,7 +50,6 @@ $METs = array(
 	array("guranje dječjih kolica", 4),
 	array("hodanje, 3 km/h, vrlo niski intenzitet", 2),
 	array("hodanje, 4 km/h, niski intenzitet", 2.8),
-	array("hodanje, 5 km/h, umjereni intenzitet", 3),
 	array("hodanje, 5 km/h, uzbrdo", 5.3),
 	array("hodanje, 6 km/h, visoki intenzitet", 4.3),
 	array("hodanje, 7 km/h, visoki intenzitet", 5),
@@ -65,7 +69,6 @@ $METs = array(
 	array("igranje društvenih igara", 1.5),
 	array("igranje šaha", 1.5),
 	array("igranje video igara", 1),
-	array("istezanje, blago", 2.3),
 	array("jedrenje na dasci, niski intenzitet", 5),
 	array("jedrenje na dasci, visoki intenzitet", 11),
 	array("jedrenje, niski intenzitet", 3),
@@ -223,10 +226,8 @@ $METs = array(
 	array("trčanje, 14 km/h, vrlo visoki intenzitet", 12.8),
 	array("trčanje, 20 km/h, vrlo visoki intenzitet, natjecateljski", 19.8),
 	array("trčanje, 6 km/h, niski intenzitet", 6),
-	array("trčanje, 8 km/h, umjereni intenzitet", 8.3),
 	array("trčanje, cross country", 9),
 	array("trčanje, maraton", 13.3),
-	array("tuširanje, stojeći", 2),
 	array("usisavanje", 3.3),
 	array("uspinjanje po ljestvama", 8),
 	array("uspinjanje po stubištu, niski intenzitet", 4),
@@ -241,8 +242,22 @@ $METs = array(
 	array("veslanje, visoki intenzitet", 12.5),
 	array("vješanje rublja, pražnjenje perilice rublja, pakiranje kofera", 2.5),
 	array("vožnja automobila, vozač", 2.5),
-	array("vožnja bicikla <16 km/h", 4),
-	array("vožnja bicikla >32 km/h, natjecateljski", 15.8)
+	array("vožnja bicikla >32 km/h, natjecateljski", 15.8),
+	array("vožnja bicikla 16 km/h",	5.8),
+	array("vožnja bicikla 22 km/h", 10.0),
+	array("vožnja bicikla uzbrdo, natjecateljski", 16.0),
+	array("vožnja bicikla uzbrdo, visoki intenzitet", 14.0),
+	array("vožnja motocikla", 3.5),
+	array("vrtlarenje",	4.0),
+	array("vrtlarenje, berba voća i povrća", 3.5),
+	array("vrtlarenje, okopavanje vrta", 3.5),
+	array("vrtlarenje, sadnja cvijeća", 2.0),
+	array("vrtlarenje, sadnja drveća", 4.5),
+	array("vrtlarenje, zalijevanje biljaka", 2.5),
+	array("vrtlarenje, zalijevanje biljaka hodajući", 3.0),
+	array("yoga", 3.3),
+	array("zabijanje čavala", 3.0),
+	array("žongliranje", 4.0)
 );
 
 ?>

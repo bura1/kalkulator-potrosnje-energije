@@ -1,16 +1,21 @@
 .kalkulator-potrosnje-energije {
-    max-width: 100%;
-    margin: 0 auto 25px auto;
+    max-width: 650px;
+    /*margin: 0 auto 25px auto;*/
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
     color: #2E3B4B;
 }
 .form-box {
-    padding: 10px 25px 25px 25px;
+    padding: 10px 10px 25px 10px;
 }
-
+.kpeform {
+    display: flow-root;
+}
 .kpeform-field {
     margin-bottom: 16px;
+}
+.kpeform-field input[disabled] {
+    opacity: 0.5;
 }
 .kpeform-field-left {
     padding-right: 8px!important;
@@ -52,6 +57,11 @@
     clear: both;
 }
 
+.kpebtn:disabled,
+.kpebtn[disabled] {
+    opacity: 0.5;
+}
+
 .parametar {
     margin-bottom: 10px;
     margin-top: 15px;
@@ -66,7 +76,16 @@
 }
 
 .rezultatkpe {
-    margin-top: 30px;
+    margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: none;
+}
+
+.rezultatnamirnice {
+    margin-top: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     display: none;
 }
 
@@ -82,6 +101,7 @@
     width: 20%;
     text-align: center;
     margin-bottom: 0;
+    box-shadow: none;
 }
 
 .spin-button::-webkit-inner-spin-button {
@@ -117,8 +137,8 @@
 }
 .input-range::-webkit-slider-thumb{
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: #70bf43;
     border-radius: 50%;
     cursor: -moz-grab;
@@ -126,8 +146,8 @@
 }
 .input-range::-moz-range-thumb{
     -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
     background: #70bf43;
     border-radius: 50%;
     cursor: -moz-grab;

@@ -38,34 +38,37 @@ function kalkulator_potrosnje_energije_form() {
                 <div class="form-box">
                     <div class="kpeform">
 
-                        <div class="col-lg-6 kpeform-field-left kpeform-field"><div class="inner-kpeform-field">
+                        <div class="col-lg-12 kpeform-field"><div class="inner-kpeform-field">
                             <label>Tjelesna masa (kg)</label><br>
-                            <input class="input-range" type="range" id="masaRange" name="points" min="10" max="200" value="70" oninput="masaRange()"><input class="spin-button" type="number" id="masaNumber" min="10" max="200" value="70" oninput="masaNumber()">
+                            <input class="input-range" type="range" id="masaRange" name="points" min="10" max="200" value="70" oninput="masaRange()"><input class="spin-button masaNumberClass" type="number" id="masaNumber" min="10" max="200" value="70" oninput="masaNumber()">
                         </div></div>
 
-                        <div class="col-lg-6 kpeform-field-right kpeform-field"><div class="inner-kpeform-field">
-                            <label>Koliko kcal potrošiti</label><br>
-                            <input class="input-range" type="range" id="kcalRange" name="points" min="0" max="2000" value="300" oninput="kcalRange()"><input class="spin-button" type="number" id="kcalNumber" min="0" max="2000" value="300" oninput="kcalNumber()">
-                        </div></div>
-
-                        <div class="col-lg-6 kpeform-field-left kpeform-field"><div class="inner-kpeform-field">
-                            <label>Vrijeme u minutama</label><br>
-                            <input class="input-range" type="range" id="vrijemeRange" name="points" min="0" max="1440" value="20" oninput="vrijemeRange()"><input class="spin-button" type="number" id="vrijemeNumber" min="0" max="1440" value="20" oninput="vrijemeNumber()">
-                        </div></div>
-
-                        <div class="col-lg-6 kpeform-field-right kpeform-field"><div class="inner-kpeform-field">
+                        <div class="col-lg-12 kpeform-field"><div class="inner-kpeform-field">
                             <label>Aktivnost</label><br>
-                            <select class="select-search" id="aktivnostValue" name="aktivnost">' .
+                            <select class="select-search" id="aktivnostValue" name="aktivnost" onchange="aktivnostOnChange()" style="width:100%">
+                                <option></option>' .
                                 $optionValues .
                             '</select>
                         </div></div>
 
-                        <button class="kpebtn" onclick="izracunaj(event)">Pokreni!</button>
+                        <div class="col-lg-12 kpeform-field"><div class="inner-kpeform-field">
+                            <label>Vrijeme u minutama</label><br>
+                            <input class="input-range" type="range" id="vrijemeRange" name="points" min="0" max="240" value="0" oninput="vrijemeRange()" disabled><input class="spin-button vrijemeNumberClass" type="number" id="vrijemeNumber" min="0" max="240" value="0" oninput="vrijemeNumber()" disabled>
+                        </div></div>
+
+                        <div class="col-lg-12 kpeform-field"><div class="inner-kpeform-field">
+                            <label>Potrošnja energije u kcal</label><br>
+                            <input class="input-range" type="range" id="kcalRange" name="points" min="0" max="1000" value="0" oninput="kcalRange()" disabled><input class="spin-button kcalNumberClass" type="number" id="kcalNumber" min="0" max="1000" value="0" oninput="kcalNumber()" disabled>
+                        </div></div>
 
                     </div>
 
                     <div class="rezultatkpe" id="rezultatkpe">
                     </div>
+
+                    <div class="rezultatnamirnice" id="rezultatnamirnice">
+                    </div>
+
                 </div>
                 <div class="alert alert-info" role="alert">
                     Radna verzija
@@ -75,7 +78,7 @@ function kalkulator_potrosnje_energije_form() {
     return $bmi;
 }
 add_shortcode('kalkulator_potrosnje_energije', 'kalkulator_potrosnje_energije_form');
-
+/* <button class="kpebtn" id="kpeCalcButton" onclick="izracunaj(event)" disabled>Pokreni!</button> */
 /* Include script */
 if ( strpos($_SERVER['REQUEST_URI'], 'kalkulator-potrosnje-energije-tjelesnom-aktivnoscu') !== false ) {
 
@@ -83,6 +86,11 @@ if ( strpos($_SERVER['REQUEST_URI'], 'kalkulator-potrosnje-energije-tjelesnom-ak
         wp_enqueue_script( 'select2', plugin_dir_url( __FILE__ ) . 'select2.min.js' );
     }
     add_action('wp_enqueue_scripts','add_select2_script');
+
+    function add_popisNamirnica() {
+        wp_enqueue_script( 'popisNamirnica', plugin_dir_url( __FILE__ ) . 'popisNamirnica.js' );
+    }
+    add_action('wp_enqueue_scripts','add_popisNamirnica');
 
     function add_script() {
         wp_enqueue_script( 'script', plugin_dir_url( __FILE__ ) . 'script.js' );
